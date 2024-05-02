@@ -1,21 +1,22 @@
 <?php
 
 class Movie{
-  public $original_title;
   public $title;
+  public $original_title;
   public $genre;
   public $plot; 
+  public $rating;
 
-  public function __construct(string $_original_title ,string $_title , string $_genre , string $_plot)
+  public function __construct(string $_title , string $_original_title , array $_genre , string $_plot)
   {
-    $this->original_title = $_original_title;
     $this->title = $_title;
+    $this->original_title = $_original_title;
     $this->genre = $_genre ;
     $this->plot = $_plot;
   }
 
   public function getFullTitle(){
-    echo $this->original_title , $this-> title;
+    echo $this-> title,  $this->original_title ;
   }
 }
 
